@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-import { LoginBoxContainer, LoginWrapper } from "./Login.style";
+import { LoginBoxContainer, LoginWrapper } from "./LoginContainer.style";
 
 import Logo from "@/public/image/Logo.svg";
 import LogoLabel from "@/public/image/GitTalk.svg";
