@@ -23,7 +23,7 @@ const Btn = styled.button<{ selected: boolean }>`
     background-color: ${(props) =>
         props.selected ? colors.black70 : colors.black30};
     padding: 1.2rem 1.6rem;
-    font-size: 1.4rem;
+    font-size: 1.7rem;
     -webkit-tap-highlight-color: transparent;
     user-select: none;
     color: white;
