@@ -18,8 +18,16 @@
         "paths": {
             "@/*": ["./*"]
         },
-        "jsxImportSource": "@emotion/react"
+        "jsxImportSource": "@emotion/react",
+        "typeRoots": ["./node_modules/@types", "./@types"]
     },
-    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "include": [
+        "next-env.d.ts",
+        "next-auth.d.ts",
+        "./types/**/*.ts",
+        "src/**/*.ts",
+        "**/*.ts",
+        "**/*.tsx"
+    ],
     "exclude": ["node_modules"]
 }
