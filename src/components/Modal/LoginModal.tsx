@@ -1,17 +1,26 @@
 /** @jsxImportSource @emotion/react */
-import React, { ReactNode } from "react";
-import styled from "@emotion/styled";
-import { css } from "@emotion/react";
+import React, { ReactNode, useEffect } from "react";
+import { useRouter } from "next/router";
 import { LoginModalStyle, StyledModal } from "./LoginModal.style";
-import colors from "@/src/pages/styles/themes/colors";
 import ModalLayout from "../layouts/ModalLayout";
 
 import BackIcon from "@/public/image/Back.svg";
 import KakaoIcon from "@/public/image/kakaoLogin.svg";
 import GithubIcon from "@/public/image/github.png";
 import Checked from "@/public/image/checked.svg";
-import Unhecked from "@/public/image/unchecked.svg";
+import Unchecked from "@/public/image/unchecked.svg";
 import Image from "next/image";
+import { signIn } from "next-auth/react";
+import { useState } from "react";
+import { useRecoilState, useRecoilValue } from "recoil";
+
+import {
+    $kakaoInfo,
+    $githubInfo,
+    $kakoState,
+    $githubState,
+    $loginState,
+} from "@/src/recoil/atoms/userState";
 
 interface ModalProps {
     openModal?: () => void;
@@ -20,8 +29,12 @@ interface ModalProps {
     children?: ReactNode;
 }
 
-const Modal = (props: ModalProps) => {
+const LoginModal = (props: ModalProps) => {
     const { openModal, closeModal, isOpen } = props;
+    const router = useRouter();
+    const loginState = useRecoilValue($loginState);
+    const [githubSigned, setGithubSigned] = useRecoilState($githubState);
+    const [kakaoState, setKakaoSigned] = useRecoilState($kakoState);
     return (
         <ModalLayout open={isOpen}>
             <StyledModal open={isOpen} css={LoginModalStyle}>
@@ -30,15 +43,34 @@ const Modal = (props: ModalProps) => {
                         <Image src={BackIcon} height={20} width={20} />
                     </div>
                     <div className="login-wrapper">
-                        <div className="kakao-btn">
+                        <div
+                            className="kakao-btn"
+                            onClick={() => {
+                                signIn("kakao", {
+                                    //callbackUrl: `${window.location.origin}/gitTalk`,
+                                }).then((res) => {
+                                    setKakaoSigned(true);
+                                });
+                            }}
+                        >
                             <Image src={KakaoIcon} layout="responsive" />
                         </div>
                         <div style={{ width: "25px" }}>
-                            <Image src={Checked} layout="responsive" />
+                            <Image
+                                src={kakaoState ? Checked : Unchecked}
+                                layout="responsive"
+                            />
                         </div>
                     </div>
                     <div className="login-wrapper">
-                        <div className="github-btn">
+                        <div
+                            className="github-btn"
+                            onClick={() =>
+                                signIn("github").then((res) => {
+                                    setGithubSigned(true);
+                                })
+                            }
+                        >
                             <div className="github-icon">
                                 <Image
                                     layout="responsive"
@@ -50,14 +82,22 @@ const Modal = (props: ModalProps) => {
                             <p>Log in with GitHub</p>
                         </div>
                         <div style={{ width: "25px", alignSelf: "center" }}>
-                            <Image src={Checked} layout="responsive" />
+                            <Image
+                                src={githubSigned ? Checked : Unchecked}
+                                layout="responsive"
+                            />
                         </div>
                     </div>
-                    <h1>Get Start!</h1>
+                    <button
+                        disabled={loginState !== "logined"}
+                        onClick={() => router.push("/gitTalk")}
+                    >
+                        Get Start!
+                    </button>
                 </div>
             </StyledModal>
         </ModalLayout>
     );
 };
 
-export default Modal;
+export default LoginModal;

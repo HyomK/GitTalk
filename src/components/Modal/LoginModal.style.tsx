@@ -36,9 +36,6 @@ export const LoginModalStyle = css`
         gap: 1.2rem;
         align-items: center;
     }
-    .login-wrapper:hover {
-        filter: brightness(0.6);
-    }
 
     .back-btn {
         float: left;
@@ -50,6 +47,9 @@ export const LoginModalStyle = css`
     .kakao-btn {
         width: 50%;
         align-self: center;
+    }
+    .kakao-btn:hover {
+        filter: brightness(0.6);
     }
     .github-btn {
         background-color: black;
@@ -64,6 +64,9 @@ export const LoginModalStyle = css`
         padding: 7px;
         font-size: 1.3rem;
     }
+    .github-btn:hover {
+        filter: brightness(0.6);
+    }
     .github-icon {
         width: 20px;
         height: 100%;
@@ -72,7 +75,7 @@ export const LoginModalStyle = css`
         align-self: center;
         padding: 0;
     }
-    h1 {
+    button {
         align-self: center;
         font-size: 2rem;
         font-weight: 500;
