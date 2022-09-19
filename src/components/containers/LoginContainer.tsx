@@ -17,7 +17,6 @@ import $userState, {
     $githubInfo,
     $loginState,
 } from "@/src/recoil/atoms/userState";
-import { json } from "stream/consumers";
 
 const LoginContainer = () => {
     const initState = useRecoilValue($loginState);
@@ -31,6 +30,7 @@ const LoginContainer = () => {
     if (status === "loading") {
         return <></>;
     } else {
+        console.log(initState);
         if (initState !== "githubSigned" && kakaoUser == null) {
             if (
                 githubUser == null ||
@@ -81,18 +81,23 @@ const LoginContainer = () => {
                     </motion.div>
                 </AnimatePresence>
             </LoginBoxContainer>
-            {isModalOpen || (isModalOpen && status == "authenticated") ? (
+            {isModalOpen ||
+            (isModalOpen &&
+                s(initState == "none" && status == "authenticated")) ? (
                 <Modal
                     openModal={() => setModalOpen(true)}
                     closeModal={() => {
                         setModalOpen(false);
                         resetInitState();
                     }}
-                    isOpen={isModalOpen || status == "authenticated"}
+                    isOpen={
+                        isModalOpen ||
+                        (initState == "none" && status == "authenticated")
+                    }
                 ></Modal>
             ) : null}
         </>
     );
 };
-/* TODO Authenticated Redux에 저장해서 component 공유처리 */
+
 export default LoginContainer;

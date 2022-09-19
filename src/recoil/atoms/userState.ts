@@ -18,7 +18,7 @@ interface UserGithub {
     image?: string | undefined;
 }
 
-const $userState = atom<IUserState>({
+export const $userState = atom<IUserState>({
     key: "recoil@user-state-atom",
     default: { isKakaoLogined: false, isGithubLogined: false },
     effects: [persistRecoilEffect({ recoilAtomKey: "recoil@user-state" })],

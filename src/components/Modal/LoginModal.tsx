@@ -12,11 +12,9 @@ import Unchecked from "@/public/image/unchecked.svg";
 import Image from "next/image";
 import { signIn } from "next-auth/react";
 import { useState } from "react";
-import { useRecoilState, useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue, useResetRecoilState } from "recoil";
 
-import {
-    $kakaoInfo,
-    $githubInfo,
+import $userState, {
     $kakoState,
     $githubState,
     $loginState,
@@ -32,6 +30,8 @@ interface ModalProps {
 const LoginModal = (props: ModalProps) => {
     const { openModal, closeModal, isOpen } = props;
     const router = useRouter();
+
+    const resetInitState = useResetRecoilState($userState);
     const loginState = useRecoilValue($loginState);
     const [githubSigned, setGithubSigned] = useRecoilState($githubState);
     const [kakaoState, setKakaoSigned] = useRecoilState($kakoState);
@@ -90,7 +90,10 @@ const LoginModal = (props: ModalProps) => {
                     </div>
                     <button
                         disabled={loginState !== "logined"}
-                        onClick={() => router.push("/gitTalk")}
+                        onClick={() => {
+                            router.push("/gitTalk");
+                            resetInitState();
+                        }}
                     >
                         Get Start!
                     </button>
