@@ -19,7 +19,8 @@
             "@/*": ["./*"]
         },
         "jsxImportSource": "@emotion/react",
-        "typeRoots": ["./node_modules/@types", "./@types"]
+        "typeRoots": ["./node_modules/@types", "./@types"],
+        "types": ["node", "react-emotion"]
     },
     "include": [
         "next-env.d.ts",
