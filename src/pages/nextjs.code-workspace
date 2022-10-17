@@ -1,0 +1,13 @@
+{
+    "folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../sulsul/sulsul-FE"
+		}
+	],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "nextjs"
+    }
+}

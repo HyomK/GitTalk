@@ -20,7 +20,7 @@
         },
         "jsxImportSource": "@emotion/react",
         "typeRoots": ["./node_modules/@types", "./@types"],
-        "types": ["node", "react-emotion"]
+        "types": ["node", "@emotion/react/types/css-prop"]
     },
     "include": [
         "next-env.d.ts",
