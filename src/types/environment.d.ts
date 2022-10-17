@@ -4,5 +4,6 @@ namespace NodeJS {
         KAKAO_SECRET: string;
         GITHUB_ID: string;
         GITHUB_SECRET: string;
+        NEXT_PUBLIC_GITHUB_TOKEN: string;
     }
 }

@@ -83,7 +83,8 @@ const LoginContainer = () => {
             </LoginBoxContainer>
             {isModalOpen ||
             (isModalOpen &&
-                s(initState == "none" && status == "authenticated")) ? (
+                initState == "none" &&
+                status == "authenticated") ? (
                 <Modal
                     openModal={() => setModalOpen(true)}
                     closeModal={() => {
