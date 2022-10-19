@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { css, jsx } from "@emotion/react";
-import colors from "@/src/pages/styles/themes/colors";
+import colors from "@/src/themes/colors";
 
 export const loginDiv = css`
     width: 50%;

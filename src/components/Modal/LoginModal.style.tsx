@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import colors from "@/src/pages/styles/themes/colors";
+import colors from "@/src/themes/colors";
 import styled from "@emotion/styled";
 import { css } from "@emotion/react";
 

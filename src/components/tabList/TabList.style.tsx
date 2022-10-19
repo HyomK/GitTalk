@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import colors from "@/src/pages/styles/themes/colors";
+import colors from "@/src/themes/colors";
 
 export const StyledTabContainer = styled.div`
     height: 80vh;

@@ -68,8 +68,8 @@ const LoginContainer = () => {
                         }}
                     >
                         <LoginWrapper>
-                            <Image src={Logo} />
-                            <Image src={LogoLabel} />
+                            <Image src={Logo} alt="" />
+                            <Image src={LogoLabel} alt="" />
                             <h1>카톡으로 작업 내용을 쉽게 알리자!</h1>
                             <Button
                                 selected={false}

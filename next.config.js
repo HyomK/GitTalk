@@ -8,7 +8,7 @@ const nextConfig = {
     },
     resolve: {
         alias: {
-            "@/": path.resolve(__dirname, "./"),
+            "@/": path.resolve(__dirname, "/"),
         },
         extensions: [".js", ".jsx", ".css"],
     },

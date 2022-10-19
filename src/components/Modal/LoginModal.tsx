@@ -40,7 +40,7 @@ const LoginModal = (props: ModalProps) => {
             <StyledModal open={isOpen} css={LoginModalStyle}>
                 <div className="login-container">
                     <div className="back-btn" onClick={closeModal}>
-                        <Image src={BackIcon} height={20} width={20} />
+                        <Image src={BackIcon} height={20} width={20} alt="" />
                     </div>
                     <div className="login-wrapper">
                         <div
@@ -53,12 +53,13 @@ const LoginModal = (props: ModalProps) => {
                                 });
                             }}
                         >
-                            <Image src={KakaoIcon} layout="responsive" />
+                            <Image src={KakaoIcon} layout="responsive" alt="" />
                         </div>
                         <div style={{ width: "25px" }}>
                             <Image
                                 src={kakaoState ? Checked : Unchecked}
                                 layout="responsive"
+                                alt=""
                             />
                         </div>
                     </div>
@@ -77,6 +78,7 @@ const LoginModal = (props: ModalProps) => {
                                     src={GithubIcon}
                                     height={20}
                                     width={20}
+                                    alt=""
                                 />
                             </div>
                             <p>Log in with GitHub</p>
@@ -85,6 +87,7 @@ const LoginModal = (props: ModalProps) => {
                             <Image
                                 src={githubSigned ? Checked : Unchecked}
                                 layout="responsive"
+                                alt=""
                             />
                         </div>
                     </div>

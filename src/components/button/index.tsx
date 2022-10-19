@@ -1,6 +1,6 @@
 import { HTMLAttributes, ReactNode } from "react";
 import styled from "@emotion/styled";
-import colors from "@/src/pages/styles/themes/colors";
+import colors from "@/src/themes/colors";
 
 type Props = {
     children?: ReactNode;
