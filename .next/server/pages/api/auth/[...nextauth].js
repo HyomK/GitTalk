@@ -40,6 +40,7 @@ var github_default = /*#__PURE__*/__webpack_require__.n(github_namespaceObject);
             clientSecret: process.env.GITHUB_SECRET
         }), 
     ],
+    secret: "gittalkbyhyominsecret",
     pages: {
         signIn: "/"
     },
