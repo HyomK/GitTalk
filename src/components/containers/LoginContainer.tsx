@@ -33,13 +33,19 @@ const LoginContainer = () => {
         console.log(initState);
         if (initState !== "githubSigned" && kakaoUser == null) {
             if (
-                githubUser == null ||
-                (githubUser !== null && githubUser.id !== data?.user.id)
+                (data !== undefined && githubUser == null) ||
+                (data !== undefined &&
+                    githubUser !== null &&
+                    githubUser.id !== data?.user.id)
             )
                 setKakaoUser(data?.user);
-        } else if (initState !== "kakaoSigned" && githubUser == null)
+        } else if (
+            data !== undefined &&
+            initState !== "kakaoSigned" &&
+            githubUser == null
+        )
             if (
-                kakaoUser == null ||
+                (data !== undefined && kakaoUser == null) ||
                 (kakaoUser !== null && kakaoUser.id !== data?.user.id)
             )
                 setGithubUser(data?.user);
