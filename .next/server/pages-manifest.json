@@ -1,0 +1,12 @@
+{
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
+  "/api/github/api": "pages/api/github/api.js",
+  "/api/github/user": "pages/api/github/user.js",
+  "/gitTalk": "pages/gitTalk.js",
+  "/": "pages/index.js",
+  "/styles/themes/GlobalStyle": "pages/styles/themes/GlobalStyle.js",
+  "/styles/themes/colors": "pages/styles/themes/colors.js",
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js"
+}
