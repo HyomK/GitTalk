@@ -4,11 +4,11 @@ import { useRouter } from "next/router";
 import { LoginModalStyle, StyledModal } from "./LoginModal.style";
 import ModalLayout from "../layouts/ModalLayout";
 
-import BackIcon from "@/public/image/Back.svg";
-import KakaoIcon from "@/public/image/kakaoLogin.svg";
-import GithubIcon from "@/public/image/github.png";
-import Checked from "@/public/image/checked.svg";
-import Unchecked from "@/public/image/unchecked.svg";
+import BackIcon from "public/image/Back.svg";
+import KakaoIcon from "public/image/kakaoLogin.svg";
+import GithubIcon from "public/image/github.png";
+import Checked from "public/image/checked.svg";
+import Unchecked from "public/image/unchecked.svg";
 import Image from "next/image";
 import { signIn } from "next-auth/react";
 import { useState } from "react";

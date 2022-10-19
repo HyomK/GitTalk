@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/uKTAJKdskiKFlPDWGfKN0/_buildManifest.js",
-    "static/uKTAJKdskiKFlPDWGfKN0/_ssgManifest.js"
+    "static/G4hOmZ0eTZbzXr2ooQlKw/_buildManifest.js",
+    "static/G4hOmZ0eTZbzXr2ooQlKw/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -15,7 +15,7 @@
       "static/chunks/framework-9b5d6ec4444c80fa.js",
       "static/chunks/main-f8fa0ccd6fd7cd8a.js",
       "static/chunks/237-0ef13e21462b67da.js",
-      "static/chunks/pages/index-f3931788053addfb.js"
+      "static/chunks/pages/index-4f381b43e7842902.js"
     ],
     "/_app": [
       "static/chunks/webpack-8646ebd196ee32a0.js",
@@ -33,7 +33,7 @@
       "static/chunks/webpack-8646ebd196ee32a0.js",
       "static/chunks/framework-9b5d6ec4444c80fa.js",
       "static/chunks/main-f8fa0ccd6fd7cd8a.js",
-      "static/chunks/pages/gitTalk-00f97a494888cbeb.js"
+      "static/chunks/pages/gitTalk-b6d5ed3c9874d618.js"
     ]
   },
   "ampFirstPages": []

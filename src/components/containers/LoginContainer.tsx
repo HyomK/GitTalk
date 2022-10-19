@@ -6,10 +6,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { LoginBoxContainer, LoginWrapper } from "./LoginContainer.style";
 
-import Logo from "@/public/image/Logo.svg";
-import LogoLabel from "@/public/image/GitTalk.svg";
+import Logo from "public/image/logo.svg";
+import LogoLabel from "public/image/GitTalk.svg";
 
-import Button from "@/src/components/button";
+import Button from "src/components/button";
 import Modal from "../Modal/LoginModal";
 
 import $userState, {
