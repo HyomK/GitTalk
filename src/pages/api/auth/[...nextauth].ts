@@ -5,6 +5,7 @@ import { useRecoilValue } from "recoil";
 import { userAgent } from "next/server";
 
 export default NextAuth({
+    secret: process.env.NEXT_PUBLIC_SECRET,
     providers: [
         KakaoProvider({
             clientId: process.env.KAKAO_RESTAPI_KEY!,
@@ -15,7 +16,7 @@ export default NextAuth({
             clientSecret: process.env.GITHUB_SECRET,
         }),
     ],
-    secret: process.env.NEXT_PUBLIC_SECRET,
+
     pages: {
         signIn: "/",
     },

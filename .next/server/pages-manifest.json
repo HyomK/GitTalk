@@ -1,11 +1,7 @@
 {
   "/_app": "pages/_app.js",
-  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js",
-  "/api/github/user": "pages/api/github/user.js",
-  "/gitTalk": "pages/gitTalk.html",
-  "/": "pages/index.html",
-  "/api/github/api": "pages/api/github/api.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/404": "pages/404.html"
+  "/": "pages/index.js",
+  "/api/auth/[...nextauth]": "pages/api/auth/[...nextauth].js"
 }
